@@ -33,7 +33,7 @@ update env evnt data basedata =
         Tick _ ->
             let
                 newMsg =
-                    if judgeMouseRect env.globalData.mousePos ( 0, 0 ) ( 100, 100 ) then
+                    if judgeMouseRect env.globalData.mousePos ( 960, 900 ) ( 100, 100 ) then
                         [ Parent (OtherMsg PromptBoxOrderForWard) ]
 
                     else
@@ -52,7 +52,7 @@ updaterec env msg data basedata =
 
 view : ComponentView SceneCommonData UserData Data BaseData
 view env data basedata =
-    ( P.rect ( 0, 0 ) ( 100, 100 ) basedata.color, 0 )
+    ( P.rect ( 960, 900 ) ( 100, 100 ) basedata.color, 0 )
 
 
 matcher : ComponentMatcher Data BaseData ComponentTarget

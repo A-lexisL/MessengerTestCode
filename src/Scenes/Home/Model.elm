@@ -12,6 +12,7 @@ import Messenger.Base exposing (Env, addCommonData)
 import Messenger.Scene.LayeredScene exposing (LayeredSceneEffectFunc, LayeredSceneInit, genLayeredScene)
 import Messenger.Scene.Scene exposing (SceneStorage)
 import Scenes.Home.Layer1.Model as Layer1
+import Scenes.Home.Layer2.Model as Layer2
 import Scenes.Home.SceneBase exposing (..)
 
 
@@ -32,7 +33,8 @@ init env msg =
     { renderSettings = []
     , commonData = cd
     , layers =
-        [ Layer1.layer NullLayerMsg envcd ]
+        [ {- Layer1.layer NullLayerMsg envcd, -} Layer2.layer NullLayerMsg envcd
+        ]
     }
 
 
