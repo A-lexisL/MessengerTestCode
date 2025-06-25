@@ -48,9 +48,13 @@ handleComponentMsg env compmsg data =
                             _ =
                                 Debug.log "inChangeFunction" unrolledc.baseData.id
                         in
-                        { unrolledc | baseData = (\b -> { b | order = 1 }) unrolledc.baseData }
+                        { unrolledc | baseData = (\b -> { b | order = 2 }) unrolledc.baseData }
 
                     else
+                        let
+                            _ =
+                                Debug.log "inChangeFunction" unrolledc.baseData.id
+                        in
                         { unrolledc | baseData = (\b -> { b | order = 0 }) unrolledc.baseData }
 
                 {- I change the order of id == 2 to 1 -}
